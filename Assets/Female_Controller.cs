@@ -36,36 +36,7 @@ public class Female_Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            anim.SetInteger("condition", 1);
-            speed = 2;
-            moveDir = new Vector3(0, 0, 1);
-            moveDir *= speed;
-            moveDir = transform.TransformDirection(moveDir);
-
-        }
-
-        if (Input.GetKey(KeyCode.B))
-        {
-            anim.SetInteger("condition", 1);
-            speed = 3;
-            moveDir = new Vector3(0, 0, -1);
-            moveDir *= speed;
-            moveDir = transform.TransformDirection(moveDir);
-
-        }
-
-        if (Input.GetKey(KeyCode.R))
-        {
-            anim.SetInteger("condition", 2);
-            speed = 4;
-            moveDir = new Vector3(0, 0, 1);
-            moveDir *= speed;
-            moveDir = transform.TransformDirection(moveDir);
-
-        }
-
+      
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetInteger("condition", 3);
@@ -85,13 +56,12 @@ public class Female_Controller : MonoBehaviour
             Move();
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.R) || Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.B))
-        {
+        if (Input.GetKeyUp(KeyCode.Space)) 
+        { 
             anim.SetInteger("condition", 0);
             moveDir = new Vector3(0, 0, 0);
         }
 
-        
     }
 
     void Move()

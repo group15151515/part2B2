@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Clicktomove : MonoBehaviour
+public class Clicktorun : MonoBehaviour
 {
 
     public Camera cam;
@@ -30,7 +30,7 @@ public class Clicktomove : MonoBehaviour
     {
 
         if (Input.GetMouseButtonDown(0))
-    
+
             startTime = Time.time;
 
         if (Input.GetMouseButtonUp(0))
@@ -66,8 +66,8 @@ public class Clicktomove : MonoBehaviour
                 }
                 //else
                 //{
-                    
-               //}
+
+                //}
             }
 
 
